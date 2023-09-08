@@ -89,6 +89,8 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    erb-formatter (0.4.3)
+      syntax_tree (~> 6.0)
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -130,6 +132,7 @@ GEM
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
+    prettier_print (1.2.1)
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
@@ -189,6 +192,8 @@ GEM
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
+    syntax_tree (6.1.1)
+      prettier_print (>= 1.2.0)
     thor (1.2.2)
     timeout (0.4.0)
     turbo-rails (1.4.0)
@@ -222,6 +227,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  erb-formatter
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
