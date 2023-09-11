@@ -8,19 +8,12 @@
     <title>Your Page Title</title>
 </head>
 <body class="bg-info bg-gradient">
-            <!-- Content on the left -->
+           
             <%= render 'navbar' %>
             
                 <h1>Welcome, this is the home page</h1>
-                <button type="button" 
-                        class="btn btn-lg btn-danger" 
-                        data-bs-toggle="popover" 
-                        title="Popover title" 
-                        data-bs-content="Amazing content, right ?">
-                        Click to toggle popover
-                </button>
-     
-            <!-- Navbar on the right -->
+        
+         
                 <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                     <div class="bg-dark p-4">
                         <h5 class="text-body-emphasis h4">Collapsed content</h5>
@@ -30,10 +23,11 @@
             </div>
         
 
-    <!-- Include Bootstrap's JavaScript and Popper.js scripts -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <%= render 'signup' %>
 </body>
 </html>
 
