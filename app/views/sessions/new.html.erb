@@ -1,0 +1,18 @@
+<h1>Log In</h1>
+<%= form_with(scope: :session, url: login_path) do |deets| %>
+
+  <div class="form-group">
+    <%= deets.label :email %><br/>
+    <%= deets.email_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= deets.label :password %><br/>
+    <%= deets.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= deets.submit "Log in", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
