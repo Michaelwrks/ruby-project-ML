@@ -2,8 +2,8 @@
 <%= form_with(scope: :session, url: login_path) do |deets| %>
 
   <div class="form-group">
-    <%= deets.label :email %><br/>
-    <%= deets.email_field :email, class: "form-control" %>
+    <%= deets.label :username %><br/>
+    <%= deets.text_field :username, class: "form-control" %>
   </div>
 
   <div class="form-group">
