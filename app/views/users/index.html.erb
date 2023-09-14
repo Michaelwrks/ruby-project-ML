@@ -1,18 +1,25 @@
-<h1>Sign IN</h1>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
-    >
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Make sure to include Bootstrap's CSS file -->
+    <title>Your Page Title</title>
+</head>
+<body class="bg-info bg-gradient">
+
+            <%= render 'navbar' %>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Sign Up</h1>
+
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
+    <label for="exampleInputEmail1">Username or Email address</label>
     <input
       type="email"
       class="form-control"
@@ -20,6 +27,8 @@
       aria-describedby="emailHelp"
       placeholder="Enter email"
     >
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
@@ -36,3 +45,5 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</body>
+</html>
