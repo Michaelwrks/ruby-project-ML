@@ -1,0 +1,2 @@
+module CreativeArtistHelper
+end

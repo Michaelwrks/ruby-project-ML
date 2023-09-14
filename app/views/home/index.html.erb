@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
     <!-- Make sure to include Bootstrap's CSS file -->
     <title>Your Page Title</title>
-</head>
+
+ </head>
 
 
 
@@ -26,8 +30,6 @@
                     </div>
                 </div>
             </div>
-<!-- app/views/shared/_login_form.html.erb -->
-
 
 <br>
 <br>
@@ -58,7 +60,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     <%# <%= render 'signup' %> 
 
 <br>
 <br>
@@ -69,6 +70,12 @@
      <%= image_tag 'light.jpeg' %>
 <%= image_tag 'download(1).jpeg' %>
 <%= image_tag 'download.jpeg' %>
-</body>
-</html>
 
+
+
+    <% if logged_in? %>
+      <%= render "userLogin" %>
+    <% end %>
+  </body>
+
+</html>
