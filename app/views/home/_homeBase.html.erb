@@ -10,18 +10,22 @@
 <br>
 <br>
 <br>
-<%= form_with(model: User.new, url: login_path, remote: true) do |form| %>
+<%= form_with(scope: :session, url: login_path) do |deets| %>
+
   <div class="form-group">
-    <%= form.label :email %>
-    <%= form.email_field :email, class: "form-control", required: true %>
+    <%= deets.label :username %><br/>
+    <%= deets.text_field :username, class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control", required: true %>
+    <%= deets.label :password %><br/>
+    <%= deets.password_field :password, class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= form.submit "Log In", class: "btn btn-primary" %>
+    <%= deets.submit "Log in", class: "btn btn-primary" %>
   </div>
+
 <% end %>
 
 <h3>Dont have an account?<h3>
