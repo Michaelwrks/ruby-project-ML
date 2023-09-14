@@ -6,4 +6,14 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "/home", to: "articles#index"
+  get "signup", to: "users#new"
+ get "login", to: "sessions#new"
+ post "login", to: "sessions#create"
+ resources :users, except: [:new]
+
+
+
+
+
+
 end
