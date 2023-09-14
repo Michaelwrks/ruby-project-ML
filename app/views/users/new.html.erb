@@ -1,0 +1,26 @@
+<h1>Sign Up</h1>
+<%= form_with(model: @user, local: true) do |deets| %>
+
+  <div class="form-group">
+    <%= deets.label :username %>:<br/>
+    <%= deets.text_field :username, class: "form-control", placeholder: "Enter username" %>
+
+  </div>
+
+  <div class="form-group">
+    <%= deets.label :email %>:<br/>
+    <%= deets.email_field :email, class: "form-control", placeholder: "Enter email" %>
+  </div>
+
+  <div class="form-group">
+    <%= deets.label :password %>:<br/>
+    <%= deets.password_field :password,
+                         class: "form-control",
+                         placeholder: "Enter password" %>
+  </div>
+
+  <div class="form-group">
+    <%= deets.submit %>
+  </div>
+
+<% end %>
