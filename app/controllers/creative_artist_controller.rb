@@ -1,8 +1,12 @@
 class CreativeArtistController < ApplicationController
+    before_action :require_user, only: [:show, :new]
     def show
-        @creative_user = Creator.new(user_params)
-      end
+      # Fetch all creative artists
+      @creatives = CreatorArtist.all
+    end
+  
     def new
-        @creative_user = Creator.new
+      @creative = CreatorArtist.new
     end
 end
+  

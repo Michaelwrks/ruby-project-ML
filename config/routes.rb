@@ -11,6 +11,8 @@ Rails.application.routes.draw do
  post "login", to: "sessions#create"
  get 'logout', to: 'sessions#destroy', as: :logout
  resources :users, except: [:new]
+ resources :creative_artists, only: [:show, :new]
+
 
 
 end

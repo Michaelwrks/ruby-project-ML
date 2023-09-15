@@ -22,6 +22,10 @@
     ></script>
     <% if logged_in? %>
       <%= render "userLogin" %>
+      <%= render partial: "creative_artist/creative_artist_list",
+      locals: {
+        creative_artists: @creatives
+      } %>
     <% end %>
   </body>
 </html>
