@@ -10,8 +10,17 @@ Rails.application.routes.draw do
  get "login", to: "sessions#new"
  post "login", to: "sessions#create"
  get 'logout', to: 'sessions#destroy', as: :logout
+ get 'creative', to: 'creative_artists#new', as: :creative
+ post "creative_login", to: "creative_artists#create"
  resources :users, except: [:new]
  resources :creative_artists, only: [:show, :new]
+ resources :creative_artists do
+  member do
+    get 'bio_info' # Adds a route for editing the profile
+    patch 'update_profile' # Adds a route for updating the profile
+  end
+end
+
 
 
 
