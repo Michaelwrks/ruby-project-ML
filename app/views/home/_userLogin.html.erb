@@ -1,4 +1,58 @@
-<%= button_to "Logout", logout_path, method: :get, class: "btn btn-danger" %>
+<%= render "navbar" %>
+
+<br>
+<br>
+<br>
+
+<%= button_to "Logout", logout_path, method: :delete, class: "btn btn-danger" %>
 <h2>Welcome
   <%= current_user.username %></h2>
-<p>Discover the creators you need to get to the next level</p>
+<p class='test-2'>Discover the creators you need to get to the next level</p>
+
+<%# <div class="row">
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+</div> %>
+
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>

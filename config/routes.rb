@@ -9,7 +9,7 @@ Rails.application.routes.draw do
  get "signup", to: "users#new"
  get "login", to: "sessions#new"
  post "login", to: "sessions#create"
- get 'logout', to: 'sessions#destroy', as: :logout
+ delete 'logout', to: 'sessions#destroy', as: :logout
  get 'creative', to: 'creative_artists#new', as: :creative
  post "creative_login", to: "creative_artists#create"
  resources :users, except: [:new]
