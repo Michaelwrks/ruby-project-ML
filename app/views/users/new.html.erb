@@ -1,49 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Make sure to include Bootstrap's CSS file -->
-    <title>Your Page Title</title>
-</head>
-<body class="bg-info bg-gradient">
-
-            <%= render 'navbar' %>
-<br>
-<br>
-<br>
-<br>
-
 <h1>Sign Up</h1>
+<%= form_with(model: @user, local: true) do |deets| %>
+
+  <div class="form-group">
+    <%= deets.label :username %>:<br/>
+    <%= deets.text_field :username, class: "form-control", placeholder: "Enter username" %>
 
   </div>
+
   <div class="form-group">
-    <label for="exampleInputEmail1">Username or Email address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
-    >
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <%= deets.label :email %>:<br/>
+    <%= deets.email_field :email, class: "form-control", placeholder: "Enter email" %>
+  </div>
+
+  <div class="form-group">
+    <%= deets.label :password %>:<br/>
+    <%= deets.password_field :password,
+                         class: "form-control",
+                         required: true,
+                         minlength: 6,
+                         pattern: ".{6,}",
+                         title: "Password must have a minimum of 6 characters" %>
+    <small class="text-danger">Password must have a minimum of 6 characters.</small>
 
   </div>
+
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="exampleInputPassword1"
-      placeholder="Password"
-    >
+    <%= deets.submit %>
   </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Tick to verify</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</body>
-</html>
+
+<% end %>

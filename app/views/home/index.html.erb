@@ -7,75 +7,25 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     >
-    <!-- Make sure to include Bootstrap's CSS file -->
-    <title>Your Page Title</title>
-
- </head>
-
-
-
-
-<body class="bg-info bg-gradient">
-           
-            <%= render 'navbar' %>
-             <%# <%= render 'log_in_pop_up'%> %>
-             <%# <%= render 'pop_up'%> %>
-                <%# <h1>Welcome, this is the home page</h1> %>
-        
-         
-                <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                    <div class="bg-dark p-4">
-                        <h5 class="text-body-emphasis h4">Collapsed content</h5>
-                        <span class="text-body-secondary">Toggleable via the navbar brand.</span>
-                    </div>
-                </div>
-            </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= form_with(model: User.new, url: login_path, remote: true) do |form| %>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.email_field :email, class: "form-control", required: true %>
-  </div>
-  <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control", required: true %>
-  </div>
-  <div class="form-group">
-    <%= form.submit "Log In", class: "btn btn-primary" %>
-  </div>
-<% end %>
-
-<%# <h3>Log in<h3> %>
-<h3>Dont have an account?<h3>
-<%# <img src="app/assets/images/download(1).jpeg" alt="rss feed" /> %>
-
-
-
+    <title>Full Circle</title>
+  </head>
+  <body class="bg-info bg-gradient">
+    <% if logged_out? %>
+      <%= render "homeBase" %>
+    <% end %>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-     <%= image_tag 'light.jpeg' %>
-<%= image_tag 'download(1).jpeg' %>
-<%= image_tag 'download.jpeg' %>
-
-
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    ></script>
     <% if logged_in? %>
       <%= render "userLogin" %>
+      <%= render partial: "creative_artists/creative_artist_list",
+      locals: {
+        creative_artists: @creatives
+      } %>
     <% end %>
   </body>
-
 </html>

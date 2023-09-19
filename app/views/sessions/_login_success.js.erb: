@@ -1,2 +1,0 @@
-$('#loginModal').modal('hide'); // Close the modal
-alert('Login successful!'); // Show a success message
