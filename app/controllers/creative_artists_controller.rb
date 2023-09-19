@@ -1,7 +1,6 @@
 class CreativeArtistsController < ApplicationController
-    # before_action :require_user, only: [:show, :new]
+
     def show
-      # Fetch all creative artists
       @creatives = CreatorArtist.all
     end
   
@@ -9,26 +8,25 @@ class CreativeArtistsController < ApplicationController
       @creative = CreatorArtist.new
     end
 
+    def edit
+      @creative = CreatorArtist.find(params[:id])
+
+    end
+    
+
     def create
       @creative = CreatorArtist.new(creative_params)
       if @creative.save
-    
-
-        redirect_to bio_info_creative_artist_path(@creative), notice: "Creative artist successfully registered!"
+        redirect_to edit_creative_profile_path(@creative)
       else
         render :new
       end
     end
-
-    def bio_info
-      @creative = CreatorArtist.find(params[:id]) 
-    end
-    
   
     private
   
     def creative_params
-      params.require(:creator_artist).permit(:username, :email, :password)
+      params.require(:creator_artist).permit(:username, :email, :password, :image, :description, :category)
     end
 end
 
