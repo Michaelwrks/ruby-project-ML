@@ -1,0 +1,29 @@
+<h1>Tell us about yourself</h1>
+
+<%= form_for @creative, url: update_profile_path, method: :patch, html: { multipart: true } do |f| %>
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description,
+                class: "form-control",
+                placeholder: "Enter description" %>
+
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category %>
+    <%= f.text_field :category,
+                 class: "form-control",
+                 placeholder: "Enter your creative category" %>
+    <small class="text-muted">Specify your creative category, e.g., stylist, videographer, writer,
+      etc.</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Save Profile", class: "btn btn-primary" %>
+  </div>
+<% end %>

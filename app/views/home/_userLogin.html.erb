@@ -1,6 +1,193 @@
-<%= button_to "Logout", logout_path, method: :get, class: "btn btn-danger" %>
+<%# <%= render "navbar" %> %>
+    <%# <a class="navbar-brand">Navbar</a> %>
+   
+<nav  class="navbar navbar-dark bg-dark fixed-top">
+
+
+ <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+      aria-label="Toggle navigation"
+    >
+    
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+ 
+
+<strong class="navbar-brand">Full Circle</strong>
+  <%# <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn" type="submit">Search</button></form> %>
+      
+<form class="searchb">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+      <%# <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span> %>
+    </form>
+
+    <%# <img src="" alt="mdo" width="32" height="32" class="rounded-circle"> %>
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Full Circle</h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= new_creative_artist_path %>">BECOME A CREATIVE</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active" href="#signup">SETTINGS</a>
+          </li>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+<%= button_to "Logout", logout_path, method: :delete, class: "btn btn-danger" %>
 <h2>Welcome
   <%= current_user.username %></h2>
+<p class='test-2'>Discover the creators you need to get to the next level</p>
 
-  
-<p>Discover the creators you need to get to the next level</p>
+<%# <div class="row">
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+  <div class="column">
+    <div class="card">..</div>
+  </div>
+</div> %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="card" style="width: 20rem; text-align:center;display:inline-block;">
+  <div class="card-block">
+    <h4 class="card-title"></h4>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary"></a>
+  </div>
+</div>
+
+<div class="card" style="width: 20rem; text-align:center;display:inline-block;">
+  <div class="card-block">
+    <h4 class="card-title"></h4>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary"></a>
+  </div>
+</div>
+
+<div class="card" style="width: 20rem; text-align:center;display:inline-block;">
+  <div class="card-block">
+    <h4 class="card-title"></h4>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary"> </a>
+  </div>
+</div>
+
+<div class="card" style="width: 20rem; text-align:center;display:inline-block;">
+  <div class="card-block">
+    <h4 class="card-title"></h4>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary"></a>
+  </div>
+</div>
+
+<%# <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">C
+      </h5>
+      <p class="card-text">
+      .</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">
+      </small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+      </h5>
+      <p class="card-text">
+      
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">
+      </small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+      </h5>
+      <p class="card-text">
+      
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">
+      </small>
+    </div>
+  </div>
+</div> %>
+

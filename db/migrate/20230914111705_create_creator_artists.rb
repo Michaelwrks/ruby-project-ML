@@ -6,6 +6,8 @@ class CreateCreatorArtists < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :password_digest
       t.string :category
+      t.text :description 
+      t.string :image_url  
 
 
       t.timestamps

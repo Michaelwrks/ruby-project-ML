@@ -1,0 +1,15 @@
+<!-- Display creative artists horizontally in a card-like format -->
+<div class="card-container">
+  <% if @creatives.present? %>
+    <% @creatives.each do |creative| %>
+      <div class="card" data-creative-artist-id="<%= creative.id %>">
+        <!-- Display creative artist information -->
+        <h2><%= creative.username %></h2>
+        <li><%= creative.category %></li>
+        <a href="#" class="btn btn-primary view-details">View Details</a>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No creative artists found</p>
+  <% end %>
+</div>
