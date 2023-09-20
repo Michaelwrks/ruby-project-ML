@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
  get "signup", to: "users#new"
+ get 'about', to: 'home#about', as: :about
  get "login", to: "sessions#new"
  get "logged_in", to: "sessions#new"
  post "login", to: "sessions#create"
