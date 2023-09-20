@@ -1,13 +1,46 @@
-<div class="card-container">
-  <% if @creatives.present? %>
-    <% @creatives.each do |creative| %>
-      <div class="card" data-creative-artist-id="<%= creative.id %>">
-        <h2><%= creative.username %></h2>
-        <li><%= creative.category %></li>
-        <a href="#" class="btn btn-primary view-details">View Details</a>
-      </div>
+<div class="container  ;">
+  <div class='row'>
+    <% if @creatives.present? %>
+      <% @creatives.each do |creative| %>
+        <div class="card" data-creative-artist-id="<%= creative.id %>">
+        <%= image_tag "light.jpeg" %>
+
+
+        <h4 class="card-title">lightingFX</h4>
+        <div class='symbols'>
+<%= image_tag  'circb.png' %>
+ <%= image_tag  'download3.png' %></div>
+          <h2><%= creative.username %></h2>
+          <li><%= creative.category %></li>
+          <a href="#" class="btn btn-primary view-details">View Details</a>
+          <p>A well known lighting conniseur in the game</p>
+           
+        </div>
+        <div class="card" data-creative-artist-id="<%= creative.id %>">
+        <%= image_tag "download(1).jpeg" %>
+
+        <h4 class="card-title">Videohrapher</h4>
+
+          <h2><%= creative.username %></h2>
+          <li><%= creative.category %></li>
+          <a href="#" class="btn btn-primary view-details">View Details</a>
+          <p>A well known lighting conniseur in the game</p>
+        </div>
+        <div class="card" data-creative-artist-id="<%= creative.id %>">
+        <%= image_tag "download.jpeg" %>
+
+        <h4 class="card-title">producer
+        </h4>
+
+          <h2><%= creative.username %></h2>
+          <li><%= creative.category %></li>
+          <a href="#" class="btn btn-primary view-details">View Details</a>
+          <p>A well known lighting conniseur in the game</p>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No creative artists found</p>
+
     <% end %>
-  <% else %>
-    <p>No creative artists found</p>
-  <% end %>
+  </div>
 </div>

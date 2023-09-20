@@ -1,0 +1,221 @@
+// .background {
+//   background-color: beige;
+// }
+
+// .background1 {
+//   background-color: beige;
+//   top: 900px;
+//   position: relative;
+// }
+
+.test-1 {
+  color: yellow;
+}
+// .test-2 {
+//   background-color: beige;
+//   top: 90px;
+//   position: relative;
+// }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Card Container */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  max-width: 300px; /* Adjust the width as needed */
+  background-color: #fff;
+  display: inline-block;
+  align-content: center;
+}
+.navbar-brand1 {
+  color: darkslategrey;
+  font-size: larger;
+}
+.form-group {
+  margin: 25px;
+}
+.card-container {
+  display: flex;
+  flex-direction: column-reverse;
+  // background-color: red;
+  display: inline-block;
+}
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Card Button */
+.card-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.navbar-toggler {
+  // position: relative;
+  // align-items: end;
+  // float: left;
+  display: flex;
+  justify-content: end;
+}
+.navbar-toggler-icon {
+  position: relative;
+  align-items: end;
+  // right: 1300px;
+  // display: flex;
+  // justify-content: end;
+}
+
+.navbar-dark bg-dark fixed-top {
+  display: flex;
+  justify-content: space-between; /* Items are pushed to opposite sides */
+  align-items: center; /* Center items vertically */
+  width: 100%;
+  padding: 20px;
+}
+/* Float four columns side by side */
+.card-group {
+  // float: left;
+  // width: 25%;
+  // padding: 1rem;
+  // column-gap: 40px;
+  // align-items: center;
+  // left: 105px;
+  // margin: 90px;
+  // margin-bottom: 1rem;
+  // position: ;
+  // position: relative;
+  // align-items:;
+  // top: 200px;
+  // height: 35px; //or however you want it
+  // width: 90%;
+  // justify-content: space-between;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 10px;
+  display: flex;
+
+  text-align: center;
+}
+
+.bg {
+  background-color: lightblue;
+  // background: linear-gradient(to bottom, blue 0% blue 50% white 0% white 50%);
+  // height: 200px;
+  // width: 200px;
+  // background: linear-gradient(to bottom);
+}
+.searchb {
+  // position: relative;
+  // left: 200px;
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-end;
+  display: inline-block;
+  // float: right;
+
+  width: 300px;
+  margin-left: 250px;
+  // margin-bottom: -100px;
+  margin-top: -3%; /* for relative positioning */
+}
+.rounded-circle {
+  height: 200px;
+  margin-bottom: -1%;
+}
+.btns {
+  width: 70px;
+  margin-left: 310px;
+  height: 37px;
+  background-color: white;
+  color: black;
+  margin-top: -2.5%; /* for relative positioning */
+  position: absolute;
+  display: inline-block;
+}
+// .navbar1 {
+//   display: inline-block;
+//   display: f;
+// }
+// .fixed-top {
+//   display: inline-block;
+//   display: flex;
+// }
+// .search_bar-package{
+//   width: 1000px;
+
+// }
+.navbar-brand {
+  // margin-right: 30px;
+  // margin-right: auto;
+  width: 1290px;
+  display: inline-block;
+  // margin-bottom: -100px;
+}
+.navbar {
+  // margin-bottom: 100px;
+  height: 55px;
+}
+.symbols{
+  
+}
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
