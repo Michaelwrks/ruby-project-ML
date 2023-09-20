@@ -1,6 +1,21 @@
+<%= render "navbar" %>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+
 <header>
   <h1>Creative Artist Sign-up</h1>
 </header>
+
+<br>
+<br>
 
 <main>
   <%= form_with(model: @creative, local: true, url: creative_signup_path(@creative), method: :post, html: { multipart: true }) do |deets| %>
