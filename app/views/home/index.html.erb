@@ -27,5 +27,9 @@
         creative_artists: @creatives
       } %>
     <% end %>
+    <% if creative_logged_in? %>
+      <%= render "creatorLogin" %>
+    <% end %>
+
   </body>
 </html>

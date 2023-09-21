@@ -1,0 +1,31 @@
+<main>
+  <div class="container">
+    <h2>Login</h2>
+    <%# <%= form_with(scope: :creative_sessions, url: creative_login_path, method: :post) do |deets| %>
+    <%# <%= form_with(model: :creator_artist, url: creative_login_path, method: :post) do |deets| %>
+    <%= form_with(model: CreatorArtist.new, url: creative_login_path, method: :post) do |deets| %>
+
+      <div class="form-group">
+        <%= deets.label :username %>
+        <%= deets.text_field :username,
+                         class: "form-control",
+                         placeholder: "Username",
+                         required: true %>
+      </div>
+
+      <div class="form-group">
+        <%= deets.label :password %>
+        <%= deets.password_field :password,
+                             class: "form-control",
+                             placeholder: "Password",
+                             required: true %>
+      </div>
+
+      <%= deets.submit "Log In", class: "btn btn-primary" %>
+
+    <% end %>
+
+    <p>Don't have an account?
+      <%= link_to "Sign up", creative_signup_path %></p>
+  </div>
+</main>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
  get 'about', to: 'home#about', as: :about
  get "login", to: "sessions#new"
  get "logged_in", to: "sessions#new"
- post "login", to: "sessions#create"
+
  post "login", to: "sessions#create"
  get 'logout', to: 'sessions#destroy', as: :logout
  resources :users, except: [:new]
@@ -18,6 +18,10 @@ Rails.application.routes.draw do
 
  get 'creative_signup', to: 'creative_artists#new'
  post 'creative_signup', to: 'creative_artists#create'
+
+ get "creative_login", to: "creative_sessions#new"
+post 'creative_login', to: 'creative_sessions#create'
+
 
  get 'creative_profile/:id/edit', to: 'creative_sessions#edit', as: :edit_creative_profile
  patch 'creative_profile/:id/edit', to: 'creative_sessions#update', as: :update_creative_profile
