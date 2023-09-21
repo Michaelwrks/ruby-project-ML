@@ -1,50 +1,50 @@
-
 <%= render "navbar" %>
-<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-  <div class="bg-dark p-4">
-    <h5 class="text-body-emphasis h4">Collapsed content</h5>
-    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+      <div class="bg-dark p-4">
+        <h5 class="text-body-emphasis h4">Collapsed content</h5>
+        <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div class='container'>
+  <div class='row'>
+    <%= form_with(scope: :session, url: login_path) do |deets| %>
+
+      <div class="form-group">
+        <%= deets.label :username %><br/>
+        <%= deets.text_field :username, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= deets.label :password %><br/>
+
+        <%= deets.password_field :password,
+                            class: "form-control",
+                            required: true,
+                            minlength: 6,
+                            pattern: ".{6,}",
+                            title: "Password must have a minimum of 6 characters" %>
+        <small class="text-danger">Password must have a minimum of 6 characters.</small>
+
+      </div>
+
+      <div class="form-group">
+        <%= deets.submit "Log in", class: "btn btn-primary" %>
+      </div>
+
+    <% end %>
+
+    <%= link_to "Don't have an account? Let's get started then",
+    signup_path,
+    style: "font-weight: bold; color: black;" %>
+  </div>
+  <div class="add-images">
+     <%= image_tag "light.jpeg" %> 
+     <%= image_tag "download(1).jpeg" %> 
+     <%= image_tag "download.jpeg" %> 
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= form_with(scope: :session, url: login_path) do |deets| %>
-
-  <div class="form-group">
-    <%= deets.label :username %><br/>
-    <%= deets.text_field :username, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= deets.label :password %><br/>
-
-    <%= deets.password_field :password,
-                         class: "form-control",
-                         required: true,
-                         minlength: 6,
-                         pattern: ".{6,}",
-                         title: "Password must have a minimum of 6 characters" %>
-    <small class="text-danger">Password must have a minimum of 6 characters.</small>
-
-  </div>
-
-  <div class="form-group">
-    <%= deets.submit "Log in", class: "btn btn-primary" %>
-  </div>
-
-<% end %>
-
-<%= link_to "Don't have an account? Let's get started then",
-signup_path,
-style: "font-weight: bold; color: black;" %>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= image_tag "light.jpeg" %>
-<%= image_tag "download(1).jpeg" %>
-<%= image_tag "download.jpeg" %>

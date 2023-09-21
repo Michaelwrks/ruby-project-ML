@@ -208,8 +208,12 @@ body {
   // margin-bottom: 100px;
   height: 55px;
 }
-.symbols{
-  
+.symbols {
+}
+.add-images {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
 }
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
