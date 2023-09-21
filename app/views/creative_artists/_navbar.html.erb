@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <strong class="navbar-brand">Full Circle</strong>
+   <a class="navbar-brand" href="<%= root_path%>">Full Circle</a> 
     <button
       class="navbar-toggler"
       type="button"
@@ -28,11 +28,11 @@
             <a class="nav-link active" aria-current="page" href="<%= new_creative_artist_path %>">BECOME A CREATIVE</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">SIGN IN</a>
+            <a class="nav-link active" aria-current="page" href="<%=  login_path %>">SIGN IN</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link active" href="#signup">ABOUT</a>
+            <a class="nav-link active" href="<%= about_path %>">ABOUT</a>
           </li>
       </div>
     </div>
