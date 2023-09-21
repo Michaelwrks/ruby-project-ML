@@ -25,6 +25,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Card Container */
+.container1 {
+  padding-right: 500px;
+  padding-left: 535px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -211,9 +218,10 @@ body {
 .symbols {
 }
 .add-images {
-  padding-top: 24px;
+  padding-top: 44px;
   display: flex;
   justify-content: space-between;
+  margin-left: -200px;
 }
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
