@@ -1,1 +1,73 @@
-<h1>Helllo world<h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="app/views/home/about.css">
+
+    <title>About Full Circle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+  </head>
+  <body>
+    <%= render "navbar" %>
+    <div class="header-container">
+      <header>
+        <h1>About Full Circle</h1>
+      </header>
+    </div>
+
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>At Full Circle, we are on a mission to empower singers to thrive in the
+        dynamic music industry. We recognize that being a gifted vocalist is
+        only the first step. True success in music requires a collective
+        effort, and we're here to make those connections happen.</p>
+
+      <h2>How It Works</h2>
+      <p>Our platform seamlessly connects singers with a wide array of industry
+        professionals:</p>
+      <ul>
+        <li>Producers</li>
+        <li>Videographers</li>
+        <li>Social Media Music Marketing Experts</li>
+        <li>Songwriters</li>
+        <li>Studio Engineers</li>
+        <li>Promotion and Distribution Specialists</li>
+      </ul>
+      <p>Join Full Circle today and begin connecting with the industry experts
+        who can guide your journey. Whether you're an emerging talent or an
+        established artist, Full Circle is here to help you complete the
+        musical circle of success.</p>
+    </div>
+  </body>
+</html>
