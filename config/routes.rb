@@ -16,6 +16,7 @@ Rails.application.routes.draw do
  resources :users, except: [:new]
  resources :creative_artists, only: [:show, :new]
 
+
  get 'creative_signup', to: 'creative_artists#new'
  post 'creative_signup', to: 'creative_artists#create'
 

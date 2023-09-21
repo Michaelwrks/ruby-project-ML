@@ -1,7 +1,7 @@
 class CreativeArtistsController < ApplicationController
 
     def show
-      @creatives = CreatorArtist.all
+      @creative = CreatorArtist.find(params[:id])
     end
   
     def new
@@ -11,6 +11,9 @@ class CreativeArtistsController < ApplicationController
     def edit
       @creative = CreatorArtist.find(params[:id])
 
+    end
+
+    def view
     end
     
 
