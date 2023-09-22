@@ -16,7 +16,7 @@ require 'faker'
     password: 'password',  
     category: Faker::Lorem.word,
     image_url: Faker::Internet.url,
-    description: Faker::Lorem.sentence,
+    # description: Faker::Lorem.sentence,
   )
   creator_artist.save!
 end
