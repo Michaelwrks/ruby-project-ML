@@ -50,14 +50,15 @@ category_descriptions = {
   ]
 }
 
-13.times do
+15.times do
+  random_category = categories.sample  # Randomly select a category from the list
   creator_artist = CreatorArtist.new(
     username: Faker::Internet.username,
     email: Faker::Internet.email,
     password: 'password',
-    category: categories[Faker::Number.between(from: 0, to: categories.length - 1)],  # Randomly select a category
+    category: random_category,
     image_url: Faker::Internet.url,
-    description: Faker::Lorem.sentence
+    description: category_descriptions[random_category].sample  # Select a random description from the corresponding category
   )
   creator_artist.save!
 end
