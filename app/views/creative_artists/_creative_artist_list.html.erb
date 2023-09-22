@@ -3,11 +3,11 @@
     <% if @creatives.present? %>
       <% @creatives.each do |creative| %>
         <div class="card" style="width: 18rem;">
-          <%= image_tag "light.jpeg"   %>
+          <%= image_tag "light.jpeg" %>
           <div class="card-body">
             <h5 class="card-title"><%= creative.username %></h5>
             <p class="card-text"><%= creative.category %>.</p>
-            <%# <p class="card-text"><%= creative.description %>.</p> 
+            <p class="card-text"><%= creative.description %>.</p>
             <%# <a href="#" class="btn btn-primary">View Details</a> %>
             <a href="<%= creative_artist_path(creative) %>" class="btn btn-primary">View Details</a>
 
