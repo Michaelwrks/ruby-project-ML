@@ -3,14 +3,14 @@ class CreativeSessionsController < ApplicationController
       @creative = CreatorArtist.find(params[:id])
     end
 
-    def update
-      @creative = CreatorArtist.find(params[:id])
-      if @creative.update(creative_params)
-        # Redirect to a profile path if i've got time for now back to home
-        redirect_to root_path
+    def create
+      creative_artist = CreatorArtist.find_by(username: params[:session][:username])
+      if creative_artist && creative_artist.authenticate(params[:session][:password])
+        session[:creative_artist_id] = creative_artist.id
+        redirect_to creative_profile_path(creative_artist.id)
       else
-        flash.now[:error] = "Please correct the errors below." 
-        render :edit 
+        flash.now[:error] = 'Invalid email/password combination'
+        render :new
       end
     end
     
