@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_14_111705) do
     t.string "email"
     t.string "password_digest"
     t.string "category"
+    t.text "description"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
