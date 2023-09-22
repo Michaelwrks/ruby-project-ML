@@ -1,23 +1,7 @@
+<nav  class="navbar navbar-dark bg-dark fixed-top">
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class='container'>
-  <%= button_to "Logout", logout_path, method: :get, class: "btn btn-danger" %>
-  <h2>Welcome
-    <%= current_user.username %></h2>
-
-    
-  <p>Discover the creators you need to get to the next level</p>
-
-
-  <nav  class="navbar navbar-dark bg-dark fixed-top">
-
-
-  <button class="navbar-toggler"
+  <button class="navbar-toggler navbar-toggler2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDarkNavbar"
@@ -25,17 +9,14 @@
         aria-label="Toggle navigation"
       >
       
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon2 navbar-toggler-icon"></span>
       </button>
 
   
 
-  <strong><a class="navbar-brand" href="<%= root_path%>">Full Circle</a></strong>
-    <%# <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button   class="btn" type="submit">Search</button></form> %>
-        
-  <div class="searchb
+  <strong><a class="navbar-brand2 navbar-brand" href="<%= root_path%>">Full Circle</a></strong>
+  
+  <div class="searchQ
   ">
     <input type="search" class="form-control rounded" placeholder="Find services" aria-label="Search" aria-describedby="search-addon" />
     <button type="button" class="btns btn-outline-primary ">search</button>
@@ -55,7 +36,7 @@
               <a class="nav-link active" aria-current="page" href="<%= new_creative_artist_path %>">BECOME A CREATIVE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">PROFILE</a>
+              <a class="nav-link active" aria-current="page" href="#">Profile</a>
             </li>
             
             <li class="nav-item">
@@ -65,18 +46,3 @@
       </div>
     </div>
   </nav>
-</div>
-
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-

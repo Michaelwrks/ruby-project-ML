@@ -1,49 +1,50 @@
 <%= render "navbar" %>
 <br>
-<br>
-<br>
-<br>
+
 
 
 
 <br>
 <br>
-
-
-<header>
-  <h1>Creative Artist Sign-up</h1>
-</header>
-
 <br>
 <br>
 
-<main>
-  <%= form_with(model: @creative, local: true, url: creative_signup_path(@creative), method: :post, html: { multipart: true }) do |deets| %>
 
-    <div class="form-group">
-      <%= deets.label :username %>:<br/>
-      <%= deets.text_field :username, class: "form-control", placeholder: "Enter username" %>
-    </div>
+<div class='container'>
+  <header>
+    <h1>Creative Artist Sign-up</h1>
+  </header>
 
-    <div class="form-group">
-      <%= deets.label :email %>:<br/>
-      <%= deets.email_field :email, class: "form-control", placeholder: "Enter email" %>
-    </div>
+  <br>
+  <br>
 
-    <div class="form-group">
-      <%= deets.label :password %>:<br/>
-      <%= deets.password_field :password,
-                           class: "form-control",
-                           required: true,
-                           minlength: 6,
-                           pattern: ".{6,}",
-                           title: "Password must have a minimum of 6 characters" %>
-      <small class="text-danger">Password must have a minimum of 6 characters.</small>
-    </div>
+  <main>
+    <%= form_with(model: @creative, local: true, url: creative_signup_path(@creative), method: :post, html: { multipart: true }) do |deets| %>
 
-    <div class="form-group">
-      <%= deets.submit "Next", class: "btn btn-primary" %>
-    </div>
+      <div class="form-group">
+        <%= deets.label :username %>:<br/>
+        <%= deets.text_field :username, class: "form-control", placeholder: "Enter username" %>
+      </div>
 
+      <div class="form-group">
+        <%= deets.label :email %>:<br/>
+        <%= deets.email_field :email, class: "form-control", placeholder: "Enter email" %>
+      </div>
+
+      <div class="form-group">
+        <%= deets.label :password %>:<br/>
+        <%= deets.password_field :password,
+                            class: "form-control",
+                            required: true,
+                            minlength: 6,
+                            pattern: ".{6,}",
+                            title: "Password must have a minimum of 6 characters" %>
+        <small class="text-danger">Password must have a minimum of 6 characters.</small>
+      </div>
+
+      <div class="form-group">
+        <%= deets.submit "Next", class: "btn btn-primary" %>
+      </div>
+</div>
   <% end %>
 </main>

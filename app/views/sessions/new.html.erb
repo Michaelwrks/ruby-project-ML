@@ -1,28 +1,31 @@
+<%= render "navbar" %>
 
-<body class="bg">
-<h1>Log In</h1>
-<%= form_with(scope: :session, url: login_path) do |deets| %>
 
-  <div class="form-group">
-    <%= deets.label :username %><br/>
-    <%= deets.text_field :username, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= deets.label :password %><br/>
-    <%= deets.password_field :password,
-                         class: "form-control",
-                         required: true,
-                         minlength: 6,
-                         pattern: ".{6,}",
-                         title: "Password must have a minimum of 6 characters" %>
-    <small class="text-danger">Password must have a minimum of 6 characters.</small>
+<div class='container container3'>
+  <h1>Log In</h1>
+  <%= form_with(scope: :session, url: login_path) do |deets| %>
 
-  </div>
+    <div class="form-group">
+      <%= deets.label :username %><br/>
+      <%= deets.text_field :username, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= deets.submit "Log in", class: "btn btn-primary" %>
+    <div class="form-group">
+      <%= deets.label :password %><br/>
+      <%= deets.password_field :password,
+                          class: "form-control",
+                          required: true,
+                          minlength: 6,
+                          pattern: ".{6,}",
+                          title: "Password must have a minimum of 6 characters" %>
+      <small class="text-danger">Password must have a minimum of 6 characters.</small>
+
+    </div>
+
+    <div class="form-group">
+      <%= deets.submit "Log in", class: "btn btn-primary" %>
+    </div>
   </div>
 
 <% end %>
-</body>
