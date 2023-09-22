@@ -1,4 +1,7 @@
-<h1>Tell us about yourself</h1>
+<%= render "navbar" %>
+<div class='container '>
+
+<h1 class='headTell'>Tell us about yourself</h1>
 
 <%= form_for @creative, url: update_creative_profile_path(@creative), method: :patch, html: { multipart: true } do |form| %>
 
@@ -25,3 +28,4 @@
     <%= form.submit "Save Changes", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>

@@ -1,13 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Username:
-          <%= @creative.username %></h5>
-        <p class="card-text">Email:
-          <a href="mailto:<%= @creative.email %>"><%= @creative.email %></a>
-        </p>
+<%= render "navbar2" %>
+
+ 
+  <div class="container container4">
+      <div class="row">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Username:
+              <%= @creative.username %></h5>
+            <p class="card-text">Email:
+              <a href="mailto:<%= @creative.email %>"><%= @creative.email %></a>
+            </p>
+
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    
+
+    
 </div>
