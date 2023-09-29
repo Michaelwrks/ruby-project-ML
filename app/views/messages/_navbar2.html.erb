@@ -1,24 +1,31 @@
+<div class='container6 container'>
+
+<nav  class="navbar navbar3 navbar-dark bg-dark fixed-top">
 
 
-  <nav class="navbar navbar-dark bg- fixed-top">
-    <div class="container-fluid">
-  <strong><a class="navbar-brand navbar-brand3" href="<%= root_path%>">Full Circle</a></strong>
-  <ul class="nav1 navbar-nav2">
-        <li class="active"><a class='a2' href="#">Explore</a></li>
-        <li class="active"><a class='a2' href="#">Businiess</a></li>
-        <li class="active"><a class='a2' href="#">Connect</a></li>
-        <li class="active"><a class='a2' href="#">Support</a></li>
-      </ul>
-      <button
-        class="navbar-toggler"
+  <button class="navbar-toggler navbar-toggler2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+      
+        <span class="navbar-toggler-icon2 navbar-toggler-icon"></span>
       </button>
+
+  <div class='container5 container '>
+
+  <strong><a class="navbar-brand2 navbar-brand" href="<%= root_path%>">Full Circle</a></strong>
+  
+  <div class="searchQ " 
+  >
+    <input type="search" class="form-control rounded" placeholder="Find services" aria-label="Search" aria-describedby="search-addon" />
+    <%# <button type="button" class="btns btn-outline-primary ">search</button> %>
+      <%= image_tag("icons8-search_1.svg", alt: "Search Icon", width: 16, height: 16, class: "bi bi-search searchsym") %>
+  </div>
+<div class='bg3'>
+</div>
       <div
         class="offcanvas offcanvas-end text-bg-dark"
         tabindex="-1"
@@ -28,31 +35,24 @@
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Full Circle</h5>
         </div>
-        
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<%= new_creative_artist_path %>">BECOME A CREATIVE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%=  login_path %>">SIGN IN</a>
+              <a class="nav-link active" aria-current="page" href="#">Profile</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link active" href="<%= about_path %>">ABOUT</a>
+              <a class="nav-link active" href="#signup">SETTINGS</a>
             </li>
         </div>
       </div>
     </div>
   </nav>
+  <div>
+<div>
+</div>
 
 
-
-
-
-
-
-
-
-
-      
