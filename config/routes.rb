@@ -26,6 +26,9 @@ Rails.application.routes.draw do
  get "creative_login", to: "creative_sessions#inside", as: :creative_login
  post "creative_login", to: "creative_sessions#inside"
 
+
+ get 'inbox/:id', to: 'messages#inbox', as: :inbox
+
  
 resources :users do
   resources :messages, only: [:new, :create]

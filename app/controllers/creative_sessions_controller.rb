@@ -4,6 +4,12 @@ class CreativeSessionsController < ApplicationController
     end
 
     def profile
+      if current_creator
+        redirect_to inbox_path(current_creator)
+      else
+        flash[:alert] = "You must be logged in to view your profile."
+        redirect_to creative_login_path
+      end
     end
 
     def inside
@@ -60,14 +66,3 @@ class CreativeSessionsController < ApplicationController
   
 
 
-    # def create
-    #   @creative_artist = CreatorArtist.find_by(username: params[:session][:username])
-    #   if @creative_artist && @creative_artist.authenticate(params[:session][:password])
-    #     puts "matching"
-    #     session[:creative_artist_id] = @creative_artist.id
-    #     redirect_to creative_profile_path(@creative_artist.id)
-    #   else
-    #     flash.now[:error] = 'Invalid email/password combination'
-    #     render :new
-    #   end
-    # end

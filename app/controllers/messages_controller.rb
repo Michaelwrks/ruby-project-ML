@@ -59,6 +59,8 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
+  
+
   def create
     @message = @user.sent_messages.build(message_params)
     @message.receiver = CreatorArtist.find(params[:message][:receiver_id])
@@ -72,6 +74,10 @@ class MessagesController < ApplicationController
       flash[:alert] = 'Error sending message.'
       render :new
     end
+  end
+
+  def inbox
+    @inbox_messages = current_creator.received_messages
   end
 
 
