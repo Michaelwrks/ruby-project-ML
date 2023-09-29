@@ -1,0 +1,16 @@
+<h1>send message</h1>
+<%= form_with(model: [@user, @message], url: user_messages_path(@user), method: :post) do |form| %>
+  <% if @creator_artists.present? %>
+    <%= form.collection_select(
+      :receiver_id,
+      @creator_artists,
+      :id,
+      :username,
+      prompt: "Select CreatorArtist"
+    ) %>
+  <% else %>
+    <p>No CreatorArtists available.</p>
+  <% end %>
+  <%= form.text_area :content, placeholder: "Type your message here..." %>
+  <%= form.submit "Send Message" %>
+<% end %>

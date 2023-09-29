@@ -20,8 +20,10 @@ class CreativeArtistsController < ApplicationController
     def create
       @creative = CreatorArtist.new(creative_params)
       if @creative.save
+        puts "to profile"
         redirect_to edit_creative_profile_path(@creative)
       else
+        puts "not to profile"
         render :new
       end
     end

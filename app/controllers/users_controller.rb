@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.new(user_params)
+    @creator_artists = CreatorArtist.all
   end
   def new
     @user = User.new
