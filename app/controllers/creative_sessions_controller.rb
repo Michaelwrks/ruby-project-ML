@@ -5,12 +5,24 @@ class CreativeSessionsController < ApplicationController
 
     def profile
       if current_creator
-        redirect_to inbox_path(current_creator)
+        # Check if the request came from the "Inbox" link
+        @creative = current_creator
+
+        if request.referer == inbox_path(@creative)
+          # Redirect to the inbox if the request came from the "Inbox" link
+          redirect_to inbox_path(@creative)
+        else
+          # Otherwise, render the profile page
+          render :profile
+        end
       else
         flash[:alert] = "You must be logged in to view your profile."
         redirect_to creative_login_path
       end
     end
+  
+
+
 
     def inside
       username = params[:username]
