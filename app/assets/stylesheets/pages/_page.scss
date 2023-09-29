@@ -1,13 +1,3 @@
-// .background {
-//   background-color: beige;
-// }
-
-// .background1 {
-//   background-color: beige;
-//   top: 900px;
-//   position: relative;
-// }
-
 .test-1 {
   color: yellow;
 }
@@ -24,24 +14,81 @@
 }
 
 body {
-  background: linear-gradient(to left, lightblue 20%, orange 110%);
+  background: linear-gradient(to left, silver 70%, white 150%);
 
   font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  // color: white;
+
+  
+
+}
+
+
+@keyframes blurInOut {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+.forms {
+  margin-bottom: 200px;
+}
+.bg-blurred {
+  background-image: linear-gradient(rgba(2, 1, 1, 2), rgba(2, 1, 1, 2)),
+    url(Music-video-treatment.jpg);
+  box-shadow: inset 0 0 0 2000px rgba(24, 23, 23, 0.628);
+  background-size: cover;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  // background-repeat: no-repeat;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  animation: blurInOut 1s ease-in-out forwards ;
+}
+.userLog {
+  background: linear-gradient(to left, silver 70%, white 150%);
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: white;
+
+  // color: black;
 }
 /* Card Container */
 .form1 {
   // border: solid darkslategrey;
   height: 60vh;
   // margin-left: 40px;
+  color: white;
 }
 .container1 {
-  // margin-top: 30px;
-
-  padding-right: 500px;
-  padding-left: 535px;
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
+  /* position: absolute; */
+  /* background-size: cover; */
+  /* left: 200px; */
+  top: 150px;
+  margin-top: 150px;
+
+  width: 370px;
+}
+.log-title {
+  justify-content: center;
+  margin-left: 45px;
+  transform: translateY(-8px); /* or any value you desire */
+  
+}
+@media only screen and (max-width: 600px) {
+  .container1 {
+    left: 0;
+    top: 100px;
+  }
 }
 .card {
   border: 1px solid #ddd;
@@ -110,13 +157,20 @@ body {
   // position: relative;
   // align-items: end;
   // float: left;
-  display: flex;
-  justify-content: end;
+  // display: flex;
+  // justify-content: end;
+  // float: left;
+  // margin-left: 1360px;
+  // justify-self: flex-end;
+  // z-index: -1;
+  // margin-top: -40px;
+  transform: translateY(-28px);
+
 }
 .navbar-toggler-icon {
   // position: relative;
   // align-items: end;
-  // right: 1300px;
+  // // right: 1300px;
   // display: flex;
   // justify-content: end;
 }
@@ -124,18 +178,21 @@ body {
   // position: relative;
   // align-items: end;
   // float: left;
-  display: flex;
-  margin-left: 13px;
-  justify-content: end;
+  // display: flex;
+  // margin-left: 13px;
+  // justify-content: end;
+  // float: left;
+  // z-index: -1;
 }
-.navbar-toggler-icon2 {
+.navbar-toggler-icon3 {
   // position: relative;
   // align-items: end;
+  // margin-left: 100px;
+  background-color: gray;
 
   // display: flex;
   // justify-content: end;
 }
-
 .navbar-dark bg-dark fixed-top {
   display: flex;
   justify-content: space-between; /* Items are pushed to opposite sides */
@@ -144,8 +201,54 @@ body {
   padding: 90px;
 }
 .navbar {
-  display: inline-block;
+  // display: inline-block;
+  // position: absolute;
+  color: black;
+
+  // background-color: #0056b3;
 }
+
+// @media (min-width: 768px)
+.navbar-nav2 {
+  /* float: left; */
+  /* margin: 0; */
+  display: inline-block;
+  // direction: rtl;
+  display: -ms-flexbox;
+  /* flex-direction: column; */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin: 7.5px -15px;
+  display: flex;
+  margin-left: 940px;
+  margin-top: -50px;
+
+}
+// margin: 0;
+
+.navbar-nav {
+}
+.nav1 {
+  float: left;
+}
+.active {
+  margin-right: 35px;
+}
+.a2 {
+  color: yellow;
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+
+&:hover{
+  color: #ff4500 !important; /* Color to change to on hover (you can adjust this) */
+  font-weight: bold;}
+}
+
+
+   /* You can adjust other styles like font-weight, background-color, etc. */
+
 /* Float four columns side by side */
 .card-group {
   // float: left;
@@ -203,15 +306,16 @@ body {
   width: 300px;
   margin-left: 250px;
   // margin-bottom: -100px;
-  margin-top: -3%; /* for relative positioning */
+  margin-top: -7%; /* for relative positioning */
 }
 .searchQ {
   // float: right;
 
   width: 300px;
-  margin-left: 250px;
-  margin-bottom: -100px;
-  margin-top: -7%; /* for relative positioning */
+  margin-left: 80px;
+  margin-bottom: -145px;
+  // margin-top: -8%; /* for relative positioning */
+  position: absolute;
   // height: 90px;
 }
 .searchq {
@@ -230,10 +334,10 @@ body {
   // margin-bottom: -100px;
   margin-top: -5%; /* for relative positioning */
 }
-.rounded-circle {
-  height: 200px;
-  margin-bottom: -1%;
-}
+// .rounded-circle {
+//   height: 200px;
+//   margin-bottom: -1%;
+// }
 .btns {
   width: 70px;
   margin-left: 310px;
@@ -244,10 +348,11 @@ body {
   position: absolute;
   display: inline-block;
 }
-// .navbar1 {
-//   display: inline-block;
-//   display: f;
-// }
+.navbar3 {
+  height: 10%;
+  margin-bottom: 10%;
+  // color: #0056b3;
+}
 // .fixed-top {
 //   display: inline-block;
 //   display: flex;
@@ -262,19 +367,32 @@ body {
   width: 1290px;
   display: inline-block;
   // margin-bottom: -100px;
+  margin-right: 180px;
+  .element {
+     /* or any value you desire */
+  }
+  
 }
 .navbar-brand2 {
-  margin-left: 105px;
+  margin-left: -65px;
   // margin-right: auto;
   width: 1290px;
   // display: inline-block;
-  position: relative;
-  top: -100%;
+  // position: relative;
+  // top: -100%;
+  margin-right: 180px;
 }
-.navbar {
-  // margin-bottom: 100px;
-  height: 55px;
+.navbar-brand3 {
+  // margin-left: -65px;
+  // margin-right: auto;
+  // width: 1290px;
+  // display: inline-block;
+  // position: relative;
+  // top: -100%;
+  // margin-right: 180px;
+  transform: translateY(17px);
 }
+
 .symbols {
 }
 .bt1 {
@@ -284,15 +402,14 @@ body {
 .createAcc {
   margin-top: 10px;
   margin-left: 23px;
+  color: whitesmoke;
 }
 .add-images {
-  padding-top: 114px;
-  // padding-bottom: 30px;
+  padding-top: 214px;
   display: flex;
   justify-content: space-around;
   margin-left: -55px;
-  // padding-left: 90px;
-  // width: 200%;
+  padding-bottom: 40px;
 }
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
@@ -315,7 +432,12 @@ body {
   text-align: center;
   min-height: 100vh;
 }
-
+.container5 {
+  display: flex;
+  display: inline-block;
+  flex-direction: row;
+  margin-right: 200px;
+}
 .im3 {
   margin-left: 180px;
   height: auto;
@@ -327,9 +449,75 @@ body {
 }
 
 .im1 {
-  margin-right: 150px;
+  // margin-right: 150px;
+  background-image: url(Music-video-treatment.jpg);
+  // background-size: cover;
 }
 
 .headTell {
   margin-top: 100px;
+}
+
+.rounded-circle2 {
+  float: left;
+  display: inline-block;
+  margin-right: 100px;
+}
+.searchsym {
+  // float: left;
+  // z-index: 9998!important;
+  // margin-top: -68px;
+  // position: relative;
+  // background-color: black;
+  margin-left: 185px;
+  margin-bottom: 135px;
+  bottom: 25px;
+  position: relative;
+  // position: fixed;
+  color: wheat;
+  width: 60px;
+  width: 90% !important; /*this*/
+
+  // background-color: black;
+  transform: scale(1.5);
+  width: 190px;
+  // z-index: -1;
+}
+.form-group {
+  color: whitesmoke;
+}
+
+.bg3 {
+  // background-color: black;
+  // border: #0056b3 solid;
+  width: 45px;
+  height: 38px;
+  margin-left: 310px;
+  margin-top: -4px;
+  position: absolute;
+  z-index: -1;
+}
+
+.navbar_home {
+  margin-right: 240px;
+
+  list-style: none;
+
+  display: flex;
+  clear: both;
+}
+
+.container4 {
+  position: absolute;
+  // display: inline-block;
+  margin-top: 140px;
+}
+.nav-item2 {
+  display: inline-block;
+}
+.navuls {
+  list-style: none;
+}
+.active2 {
+  display: inline-block;
 }
