@@ -1,5 +1,6 @@
 
-
+  <body class='userLog'>
+  <%= render "navbar3" %>
 <br>
 <br>
 <br>
@@ -11,67 +12,90 @@
     <%= current_user.username %></h2>
 
     
-  <p>Discover the creators you need to get to the next level</p>
+  <p>Dilscover the creators you need to get to the next level</p>
 
 
-  <nav  class="navbar navbar-dark bg-dark fixed-top">
+ <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <%= link_to root_path, class: "navbar-brand mt-2 mt-lg-0" do %>
+      <% end %>
 
-
-  <button class="navbar-toggler"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar"
-        aria-label="Toggle navigation"
-      >
-      
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-  
-
-  <strong><a class="navbar-brand" href="<%= root_path%>">Full Circle</a></strong>
-    <%# <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button   class="btn" type="submit">Search</button></form> %>
-        
-  <div class="searchb
-  ">
-    <input type="search" class="form-control rounded" placeholder="Find services" aria-label="Search" aria-describedby="search-addon" />
-    <button type="button" class="btns btn-outline-primary ">search</button>
-  </div>
-      <div
-        class="offcanvas offcanvas-end text-bg-dark"
-        tabindex="-1"
-        id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Full Circle</h5>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%= new_creative_artist_path %>">BECOME A CREATIVE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">PROFILE</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link active" href="#signup">SETTINGS</a>
-            </li>
-        </div>
-      </div>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Dashboard", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Team", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Projects", "#", class: "nav-link" %>
+        </li>
+      </ul>
+      <!-- Left links -->
     </div>
-  </nav>
-</div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <%= link_to "#", class: "text-reset me-3" do %>
+        <i class="fas fa-shopping-cart"></i>
+      <% end %>
+
+      <!-- Notifications -->
+      <div class="dropdown">
+        <%= link_to "#", class: "text-reset me-3 dropdown-toggle hidden-arrow", id: "navbarDropdownMenuLink", role: "button", "data-bs-toggle" => "dropdown", "aria-expanded" => "false" do %>
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        <% end %>
+      
+    </div>
+    <!-- Right elements -->
+  </div></div>
+
 
 <br>
 <br>
 <br>
 
 
+    
+<div class='container'>
+    <div class=" navbar_home collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar_home navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to('#', class: 'nav-link mx-2 active', 'aria-current' => 'page') do %>
+            Home
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to('#', class: 'nav-link mx-2') do %>
+            Products
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to('#', class: 'nav-link mx-2') do %>
+            Pricing
+          <% end %>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to('#', class: 'nav-link mx-2 dropdown-toggle', id: 'navbarDropdownMenuLink', 'data-bs-toggle' => 'dropdown', 'aria-expanded' => 'false') do %>
+            Company
+          <% end %>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><%= link_to('Blog', '#', class: 'dropdown-item') %></li>
+            <li><%= link_to('About Us', '#', class: 'dropdown-item') %></li>
+            <li><%= link_to('Contact us', '#', class: 'dropdown-item') %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+    
+
 <br>
 <br>
 <br>
@@ -80,3 +104,4 @@
 <br>
 <br>
 
+</body>
