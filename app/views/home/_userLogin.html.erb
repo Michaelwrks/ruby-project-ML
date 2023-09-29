@@ -9,13 +9,9 @@
 <div class='container6'>
   <div class="row msgs">
   <div class="col-4">
-    <%# <div class="list-group" id="list-tab" role="tablist"> %>
-      <%# <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a> %>
-      <%# <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a> %>
-      <%# <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="<%new_user_message_path(@user)%>
-       <%= link_to "Messages", new_user_message_path(@user), class: "msgbox list-group-item list-group-item-action", id: "list-messages-list"%>
-
-      <%# <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a> %>
+    <div class="list-group" id="list-tab" role="tablist">
+       <%= link_to "Messages", new_user_message_path(@user), class: "list-group-item list-group-item-action", id: "list-messages-list"%>
+ 
     </div>
   </div>
    <% if current_user.messages.exists?%>

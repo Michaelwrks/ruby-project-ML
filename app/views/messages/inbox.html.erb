@@ -1,0 +1,22 @@
+<h1>Inbox</h1>
+
+<% if @inbox_messages.any? %>
+  <ul>
+    <% @inbox_messages.each do |message| %>
+      <li>
+        <strong>From:</strong>
+        <%= message.sender.username %><br>
+        <strong>Message:</strong>
+        <%= message.content %><br>
+        <strong>Sent at:</strong>
+        <%= message.created_at %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No messages in the inbox.</p>
+<% end %>
+
+<%= link_to "Back to Profile",
+creative_profile_path(@creative),
+class: "btn btn-secondary" %>
