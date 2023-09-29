@@ -77,6 +77,7 @@ class MessagesController < ApplicationController
   end
 
   def inbox
+    @creative = current_creator
     @inbox_messages = current_creator.received_messages
   end
 
