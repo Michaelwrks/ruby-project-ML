@@ -1,31 +1,31 @@
 <%= render "navbar" %>
-<div class='container '>
+<div class='container'>
+  <h1>Tell us about yourself</h1>
 
-<h1 class='headTell'>Tell us about yourself</h1>
+  <%= form_for @creative, url: update_creative_profile_path(@creative), method: :patch, html: { multipart: true } do |form| %>
 
-<%= form_for @creative, url: update_creative_profile_path(@creative), method: :patch, html: { multipart: true } do |form| %>
+    <div class="form-group">
+      <%= form.label :image_url %>
+      <%= form.file_field :image_url, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :image_url %>
-    <%= form.file_field :image_url, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :description %>
+      <%= form.text_area :description,
+                     class: "form-control",
+                     placeholder: "Enter a brief description about yourself" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description,
-                   class: "form-control",
-                   placeholder: "Enter a brief description about yourself" %>
-  </div>
+    <div class="form-group">
+      <%= form.label :category %>
+      <%= form.text_field :category,
+                      class: "form-control",
+                      placeholder: "Enter your creative category" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :category %>
-    <%= form.text_field :category,
-                    class: "form-control",
-                    placeholder: "Enter your creative category" %>
-  </div>
+    <div class="form-group">
+      <%= form.submit "Save Changes", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 
-  <div class="form-group">
-    <%= form.submit "Save Changes", class: "btn btn-primary" %>
-  </div>
-<% end %>
 </div>

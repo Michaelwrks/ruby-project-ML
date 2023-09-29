@@ -11,6 +11,9 @@ class SessionsController < ApplicationController
         render 'new'
       end
     end
+  def logged
+    
+  end
   def destroy
     session[:user_id] = nil
     flash[:notice] = "You have been logged out."

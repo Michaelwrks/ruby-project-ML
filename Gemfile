@@ -76,5 +76,5 @@ group :test do
 end
 
 gem 'bcrypt'
-gem 'erb-formatter'
+
 gem 'faker'
