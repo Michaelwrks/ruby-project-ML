@@ -1,3 +1,11 @@
+  <%= render "navbar2" %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="container container7">
+
 <h1>send message</h1>
 <%= form_with(model: [@user, @message], url: user_messages_path(@user), method: :post) do |form| %>
   <% if @creator_artists.present? %>
@@ -13,4 +21,5 @@
   <% end %>
   <%= form.text_area :content, placeholder: "Type your message here..." %>
   <%= form.submit "Send Message" %>
+  </div>
 <% end %>

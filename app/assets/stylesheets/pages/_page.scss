@@ -14,7 +14,7 @@
 }
 
 body {
-  background: linear-gradient(to left, silver 70%, white 150%);
+  background: linear-gradient(to left, silver 70%, rgb(232, 224, 224) 150%);
 
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
@@ -236,9 +236,9 @@ body {
   margin-right: 35px;
 }
 .a2 {
-  color: yellow;
+  color: white;
   text-decoration: none;
-  background-color: transparent;
+  // background-color: blue;
   transition: color 0.3s ease; /* Smooth transition for color changes */
 
 &:hover{
@@ -421,6 +421,7 @@ body {
 }
 .container3 {
   margin-top: 80px;
+  
   justify-content: center;
 }
 .container4 {
@@ -520,4 +521,24 @@ body {
 }
 .active2 {
   display: inline-block;
+}
+.msgbox{
+  width: 90px;
+
+}
+.msgs{
+  margin-left: 900px;
+}
+.container6{
+  margin-left: 900px;
+
+  // top: 100px;
+  // position: relative;
+}
+
+.container7{
+  position: absolute;
+  // display: inline-block;
+  margin-top: 180px;
+  margin-right:90px ;
 }
